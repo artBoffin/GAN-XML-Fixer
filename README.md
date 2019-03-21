@@ -11,7 +11,7 @@ This tool uses [xmlschema](https://github.com/brunato/xmlschema). To import xmls
     pip install xmlschema
 
 ## How To Use
-In the command line, cd into the root of this repository and run this command. This will create two directories in the root of this repo named 'invalid_svg' and 'valid_svg', by default:
+In the command line, cd into the root of this repository and run this command (replacing "my_txt_file.txt" with the name/path of your txt file). This will create two directories in the root of this repo named 'invalid_svg' and 'valid_svg', by default:
 
     ./vcc.py -txt my_txt_file.txt
 
