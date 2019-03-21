@@ -1,0 +1,573 @@
+<!-- Coded by: Allan Gelman, Concept by: Alexander Reben, Supported by Stochastic Labs -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/svg" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="style">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="type" use="optional"/>
+          <xs:attribute type="xs:string" name="media" use="optional"/>
+          <xs:attribute type="xs:string" name="title" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="feMorphology">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="radius" use="optional"/>
+          <xs:attribute type="xs:string" name="operator" use="optional"/>
+          <xs:attribute type="xs:string" name="in" use="optional"/>
+          <xs:attribute type="xs:string" name="result" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="feGaussianBlur">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="stdDeviation" use="optional"/>
+          <xs:attribute type="xs:string" name="in" use="optional"/>
+          <xs:attribute type="xs:string" name="result" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="feOffset">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="dx" use="optional"/>
+          <xs:attribute type="xs:string" name="dy" use="optional"/>
+          <xs:attribute type="xs:string" name="in" use="optional"/>
+          <xs:attribute type="xs:string" name="result" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="feComposite">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="in" use="optional"/>
+          <xs:attribute type="xs:string" name="in2" use="optional"/>
+          <xs:attribute type="xs:string" name="operator" use="optional"/>
+          <xs:attribute type="xs:string" name="k2" use="optional"/>
+          <xs:attribute type="xs:string" name="k3" use="optional"/>
+          <xs:attribute type="xs:string" name="result" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="feMergeNode">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="in" use="optional"/>
+          <xs:attribute type="xs:string" name="in2" use="optional"/>
+          <xs:attribute type="xs:string" name="operator" use="optional"/>
+          <xs:attribute type="xs:string" name="result" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="feColorMatrix">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="values" use="optional"/>
+          <xs:attribute type="xs:string" name="type" use="optional"/>
+          <xs:attribute type="xs:string" name="in" use="optional"/>
+          <xs:attribute type="xs:string" name="result" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="circle">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="cx" use="optional"/>
+          <xs:attribute type="xs:string" name="cy" use="optional"/>
+          <xs:attribute type="xs:string" name="r" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="rx" use="optional"/>
+          <xs:attribute type="xs:string" name="ry" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="desc" type="xs:string"/>
+  <xs:element name="line">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="pathLength" use="optional"/>
+          <xs:attribute type="xs:string" name="x1" use="optional"/>
+          <xs:attribute type="xs:string" name="y1" use="optional"/>
+          <xs:attribute type="xs:string" name="x2" use="optional"/>
+          <xs:attribute type="xs:string" name="y2" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stop">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="stop-color" use="optional"/>
+          <xs:attribute type="xs:string" name="offset" use="optional"/>
+          <xs:attribute type="xs:string" name="stop-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="stop-color" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="linearGradient">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element ref="svg:stop" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="gradientTransform" use="optional"/>
+      <xs:attribute type="xs:string" name="gradientUnits" use="optional"/>
+      <xs:attribute type="xs:string" name="transform" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="class" use="optional"/>
+      <xs:attribute type="xs:string" name="style" use="optional"/>
+      <xs:attribute type="xs:string" name="x1" use="optional"/>
+      <xs:attribute type="xs:string" name="y1" use="optional"/>
+      <xs:attribute type="xs:string" name="x2" use="optional"/>
+      <xs:attribute type="xs:string" name="y2" use="optional"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="radialGradient">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element ref="svg:stop" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="gradientTransform" use="optional"/>
+      <xs:attribute type="xs:string" name="gradientUnits" use="optional"/>
+      <xs:attribute type="xs:string" name="transform" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="class" use="optional"/>
+      <xs:attribute type="xs:string" name="style" use="optional"/>
+      <xs:attribute type="xs:string" name="x1" use="optional"/>
+      <xs:attribute type="xs:string" name="y1" use="optional"/>
+      <xs:attribute type="xs:string" name="x2" use="optional"/>
+      <xs:attribute type="xs:string" name="y2" use="optional"/>
+      <xs:attribute type="xs:string" name="cy" use="optional"/>
+      <xs:attribute type="xs:string" name="cx" use="optional"/>
+      <xs:attribute type="xs:string" name="r" use="optional"/>
+      <xs:attribute type="xs:string" name="fx" use="optional"/>
+      <xs:attribute type="xs:string" name="fy" use="optional"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="use">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute ref="xlin:href" xmlns:xlin="http://www.w3.org/1999/xlink" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="overflow" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="clip-rule" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filter">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:feMorphology" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:feGaussianBlur" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:feOffset" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:feComposite" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:feColorMatrix" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:feMerge" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="x" use="optional"/>
+      <xs:attribute type="xs:string" name="y" use="optional"/>
+      <xs:attribute type="xs:string" name="width" use="optional"/>
+      <xs:attribute type="xs:string" name="height" use="optional"/>
+      <xs:attribute type="xs:string" name="filterUnits"/>
+      <xs:attribute type="xs:string" name="id"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="feMerge">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:feMergeNode" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="style" use="optional"/>
+      <xs:attribute type="xs:string" name="class" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clipPath">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:use" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:path" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="style" use="optional"/>
+      <xs:attribute type="xs:string" name="class" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mask">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:use" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="style" use="optional"/>
+      <xs:attribute type="xs:string" name="class" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="fill" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ellipse">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">      
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>      
+          <xs:attribute type="xs:string" name="cx" use="optional"/>
+          <xs:attribute type="xs:string" name="cy" use="optional"/>
+          <xs:attribute type="xs:string" name="rx" use="optional"/>
+          <xs:attribute type="xs:string" name="ry" use="optional"/>
+          <xs:attribute type="xs:string" name="r" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rect">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:float" name="x" use="optional"/>
+          <xs:attribute type="xs:float" name="rx" use="optional"/>
+          <xs:attribute type="xs:float" name="y" use="optional"/>
+          <xs:attribute type="xs:float" name="width" use="optional"/>
+          <xs:attribute type="xs:float" name="height" use="optional"/>
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="text">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="x" use="optional"/>
+          <xs:attribute type="xs:string" name="y" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="font-size" use="optional"/>
+          <xs:attribute type="xs:string" name="font-weight" use="optional"/>
+          <xs:attribute type="xs:string" name="font-family" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="path">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="cx" use="optional"/>
+          <xs:attribute type="xs:string" name="cy" use="optional"/>
+          <xs:attribute type="xs:string" name="r" use="optional"/>
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="d" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="clip-path" use="optional"/>
+          <xs:attribute type="xs:string" name="clip-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="version" use="optional"/>
+          <xs:attribute type="xs:string" name="xmlns" use="optional"/>
+          <xs:attribute type="xs:string" name="preserveAspectRatio" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="polygon">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="pathLength" use="optional"/>
+          <xs:attribute type="xs:string" name="points" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="d" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="polyline">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="transform" use="optional"/>
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="pathLength" use="optional"/>
+          <xs:attribute type="xs:string" name="points" use="optional"/>
+          <xs:attribute type="xs:string" name="class" use="optional"/>
+          <xs:attribute type="xs:string" name="style" use="optional"/>
+          <xs:attribute type="xs:string" name="fill" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+          <xs:attribute type="xs:string" name="opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="filter" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linecap" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-linejoin" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+          <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+          <xs:attribute type="xs:string" name="mask" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>      
+  <xs:element name="g">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:style" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:g" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:defs" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:path" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:rect" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:ellipse" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:line" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:title" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:circle" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:polygon" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:polyline" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:text" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:linearGradient" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:radialGradient" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:use" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:clipPath" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:mask" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:desc" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="clip-path" use="optional"/>
+      <xs:attribute type="xs:string" name="fill-opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="style" use="optional"/>
+      <xs:attribute type="xs:string" name="class" use="optional"/>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+      <xs:attribute type="xs:string" name="fill" use="optional"/>
+      <xs:attribute type="xs:string" name="d" use="optional"/>
+      <xs:attribute type="xs:string" name="transform" use="optional"/>
+      <xs:attribute type="xs:string" name="fill-rule" use="optional"/>
+      <xs:attribute type="xs:string" name="filter" use="optional"/>
+      <xs:attribute type="xs:string" name="stroke" use="optional"/>
+      <xs:attribute type="xs:string" name="stroke-width" use="optional"/>
+      <xs:attribute type="xs:string" name="opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="mask" use="optional"/>
+      <xs:attribute type="xs:string" name="stroke-miterlimit" use="optional"/>
+      <xs:attribute type="xs:string" name="stroke-opacity" use="optional"/>
+      <xs:attribute type="xs:string" name="clip-rule" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="defs">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:style" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:g" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:defs" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:path" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:rect" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:ellipse" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:line" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:title" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:circle" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:polygon" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:polyline" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:text" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:linearGradient" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:radialGradient" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:use" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:clipPath" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:mask" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:filter" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:desc" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+          </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="svg">
+    <xs:annotation>
+      <xs:documentation>Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="svg:style" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:g" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:defs" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:path" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:rect" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:ellipse" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:line" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:title" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:circle" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:polygon" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:polyline" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:text" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:linearGradient" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:radialGradient" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:use" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:clipPath" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:mask" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:filter" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+            <xs:element ref="svg:desc" maxOccurs="unbounded" minOccurs="0" xmlns:svg="http://www.w3.org/2000/svg"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="clip-path" use="optional"/>
+      <xs:attribute type="xs:string" name="enable-background"/>
+      <xs:attribute type="xs:float" name="version"/>
+      <xs:attribute type="xs:string" name="id"/>
+      <xs:attribute type="xs:string" name="x"/>
+      <xs:attribute type="xs:string" name="y"/>
+      <xs:attribute type="xs:string" name="viewBox"/>
+      <xs:attribute type="xs:string" name="style"/>
+      <xs:attribute ref="xml:space"/>
+      <xs:attribute type="xs:string" name="fill-rule"/>
+      <xs:attribute type="xs:string" name="clip-rule"/>
+      <xs:attribute type="xs:string" name="width"/>
+      <xs:attribute type="xs:string" name="height"/>
+      <xs:attribute type="xs:string" name="preserveAspectRatio"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
